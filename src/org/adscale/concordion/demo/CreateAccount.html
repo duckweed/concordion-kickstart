@@ -1,0 +1,20 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+<body>
+<p>
+
+<h1>
+    create account
+</h1>
+    <span concordion:assertTrue="createAnAccountCalled(#accountName)">
+    When: we create an account called <span concordion:set="#accountName">BigDayOut</span>
+    </span>
+<br/>
+    <span concordion:assertTrue="findsAccountCalled(#accountName)">
+    Then: we can see an account of that name in the database</span>
+
+<h1>
+    create another account
+</h1>
+</p>
+</body>
+</html>
